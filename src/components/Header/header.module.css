@@ -1,0 +1,56 @@
+.header {
+    background-color: #02025a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+}
+
+.headerContainer2 {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 30px 0px;
+
+}
+
+.headerList {
+    display: flex;
+    gap: 40px;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.listItem.active {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-top: 13px;
+}
+
+.description {
+    margin: 20px 0px;
+}
+
+.btn {
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}

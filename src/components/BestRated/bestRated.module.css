@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.item {
+    flex: 1;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 100%;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.city {
+    font-weight: 300;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.rating>button {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 4px;
+}
+.rating>span{
+    font-size: 14px;
+}

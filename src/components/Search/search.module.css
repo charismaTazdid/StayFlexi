@@ -1,0 +1,97 @@
+.searchContainer {
+    height: 30px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+    z-index: 2;
+}
+
+.searchbarIcon {
+    color: gray;
+    cursor: pointer;
+}
+
+.searchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+}
+
+.searchText {
+    color: gray;
+    cursor: pointer;
+}
+
+.searchBtn {
+    background-color: #02025a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.searchBtn:hover {
+    background-color: #000085;
+}
+
+.date {
+    position: absolute;
+    top: 50px;
+}
+
+/* options component style here  */
+
+.options {
+    color: gray;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.optionsCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+}
+.counterBtn{
+    width: 30px;
+    height: 30px;
+    color: #0071c2;
+    border: 1px solid #0071c2;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: white;
+}
+.counterBtn:hover{
+    background-color: #0000ff0c;
+    font-weight: bold;
+}
+.counterBtn:disabled{
+    cursor: not-allowed;
+}
