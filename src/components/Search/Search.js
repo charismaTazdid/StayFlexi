@@ -6,9 +6,13 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { format } from "date-fns";
 import styles from "./search.module.css";
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
 
+    const [destination, setDestination] = useState("");
+
+    // Guest State
     const [openOptions, setOpenOptions] = useState(false);
     const [options, setOptions] = useState({
         adult: 1,
@@ -16,6 +20,7 @@ const Search = () => {
         room: 1
     });
 
+    // Date State
     const [showCalender, setShowCalender] = useState(false);
     const [date, setDate] = useState([{
         statDate: new Date(),
@@ -23,6 +28,7 @@ const Search = () => {
         key: "selection"
     }]);
 
+    // handle room, person and children increment and dicrement
     const handleCounter = (name, opration) => {
         setOptions((previousValue) => {
             return {
@@ -31,11 +37,17 @@ const Search = () => {
         });
     };
 
+    // navigate user with state data
+    const navigate = useNavigate();
+    const handleSearch = () => {
+        navigate('/hotels', { state: { destination, date, options } })
+    };
+
     return (
         <div className={styles.searchContainer}>
             <div className={styles.searchItem}>
                 <FontAwesomeIcon icon={faBed} className={styles.searchbarIcon} />
-                <input type="text" placeholder='Where are you going?' className={styles.searchInput} />
+                <input type="text" placeholder='Where are you going?' className={styles.searchInput} onChange={(e) => setDestination(e.target.value)} />
             </div>
 
             {/* start and end date */}
@@ -100,7 +112,7 @@ const Search = () => {
 
             {/* search buttonn  */}
             <div className={styles.searchItem}>
-                <button className={styles.searchBtn}> SEARCH</button>
+                <button className={styles.searchBtn} onClick={handleSearch}> SEARCH</button>
             </div>
         </div>
     );

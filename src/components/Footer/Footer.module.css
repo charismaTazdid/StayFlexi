@@ -30,11 +30,11 @@
 .footerText>a{
     font-weight: bold;
     text-decoration: none;
-    padding: 5px 30px;
+    padding: 4px 30px;
+    border-radius: 5px;
     color: black;
-    background-color: rgba(255, 204, 0, 0.846);
+    background-color: rgba(163, 131, 1, 0.846);
 }
 .footerText>a:hover{
     background-color: rgba(0, 208, 255, 0.846);
-    border-radius: 2px;
 }
