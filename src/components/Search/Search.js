@@ -64,6 +64,7 @@ const Search = () => {
                         moveRangeOnFirstSelection={false}
                         ranges={date}
                         className={styles.date}
+                        minDate={new Date()}
                     />
                 }
             </div>

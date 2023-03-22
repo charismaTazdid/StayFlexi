@@ -27,6 +27,34 @@
     margin-bottom: 10px;
 }
 
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.item>label {
+    font-size: 12px;
+}
+
+.item>input {
+    height: 30px;
+    border: none;
+    padding: 5px;
+
+}
+
+.item>span {
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* above Style converted to css file to js file */
 .listResult {
     flex: 3;
 }
