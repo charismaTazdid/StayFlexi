@@ -55,6 +55,33 @@
 }
 
 /* above Style converted to css file to js file */
+.options {
+    padding: 10px;
+}
+
+.optionItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 12px;
+}
+
+.optionInput {
+    width: 50px;
+}
+
+.btn {
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 3px;
+}
+
 .listResult {
     flex: 3;
 }
