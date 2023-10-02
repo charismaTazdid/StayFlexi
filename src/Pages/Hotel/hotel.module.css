@@ -1,0 +1,119 @@
+.hotelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hotelWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.bookNowBtn {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.title {
+    font-size: 24px;
+}
+
+.address {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.distance {
+    color: #0071c2;
+    font-weight: 500;
+}
+
+.priceHighlight {
+    color: #008009;
+    font-weight: 500;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imagesWrapper {
+    width: 33%;
+}
+
+.hotelImge {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotelDetials {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.detailsText {
+    flex: 3;
+}
+
+.title {}
+
+.description {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.detailsPrice {
+    flex: 1;
+    background-color: #ebf3ff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detailsPrice>h1 {
+    font-size: 17px;
+    color: #555;
+}
+
+.detailsPrice>span {
+    font-size: 13px;
+}
+
+.detailsPrice>h2 {
+    font-weight: 200;
+}
+
+
+.reserveBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}

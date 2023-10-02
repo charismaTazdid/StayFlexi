@@ -12,10 +12,10 @@ const HotelList = () => {
     const location = useLocation();
 
     // will add Optional Chening later
-    const [destination, setDestination] = useState(location.state.destination)
-    const [date, setDate] = useState(location.state.date);
+    const [destination, setDestination] = useState(location.state.destination || "")
+    const [date, setDate] = useState(location.state.date || "");
     const [showCalender, setShowCalender] = useState(false);
-    const [options, setOptions] = useState(location.state.options)
+    const [options, setOptions] = useState(location.state.options || "")
 
     return (
         <div>

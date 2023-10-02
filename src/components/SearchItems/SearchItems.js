@@ -25,7 +25,7 @@ const SearchItems = () => {
                 <div className={styles.detailsText}>
                     <span className={styles.price}>$280</span>
                     <span className={styles.priceOption}>Includes Taxes and Other fees</span>
-                    <button className={styles.availability}>See Availability</button>
+                    <button className={styles.availabilityBtn}>See Availability</button>
                 </div>
             </div>
         </div>

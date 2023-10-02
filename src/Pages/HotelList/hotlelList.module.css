@@ -15,10 +15,11 @@
 .listSearch {
     flex: 1;
     background-color: #e5ab0b;
-    padding: 10px;
+    padding: 40px 10px;
     border-radius: 10px;
     position: sticky;
     top: 10px;
+    height: max-content;
 }
 
 .title {
