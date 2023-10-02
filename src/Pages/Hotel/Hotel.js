@@ -5,9 +5,30 @@ import Header from '../../components/Header/Header';
 import MailList from "../../components/MailList/MailList.js";
 import Footer from "../../components/Footer/Footer.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const Hotel = () => {
+
+    const [slideIndex, setSlideIndex] = useState(0);
+    const [openSlide, setOpenSlide] = useState(false);
+
+    const handleSlide = (imageIndex) => {
+        setSlideIndex(imageIndex);
+        setOpenSlide(!openSlide)
+    }
+
+    const handleArrowMove = (direction) => {
+        let newSlideNumber;
+
+        if (direction === "left") {
+            newSlideNumber = slideIndex === 0 ? (hotelImages.length - 1) : slideIndex - 1;
+        }
+        else {
+            newSlideNumber = slideIndex === (hotelImages.length - 1) ? 0 : slideIndex + 1;
+        }
+        setSlideIndex(newSlideNumber);
+    };
 
     const hotelImages = [
         {
@@ -38,6 +59,17 @@ const Hotel = () => {
             <div className={styles.hotelContainer}>
 
                 {/* Image Slider */}
+                {
+                    openSlide &&
+                    <div className={styles.slieder}>
+                        <FontAwesomeIcon icon={faCircleXmark} className={styles.cancleSlider} onClick={() => setOpenSlide(false)} />
+                        <FontAwesomeIcon icon={faCircleArrowLeft} className={styles.arrow} onClick={() => handleArrowMove("left")} />
+                        <div className={styles.sliderWrapper}>
+                            <img src={hotelImages[slideIndex].src} alt="" className={styles.sliderImg} />
+                        </div>
+                        <FontAwesomeIcon icon={faCircleArrowRight} className={styles.arrow} onClick={() => handleArrowMove("right")} />
+                    </div>
+                }
 
                 <div className={styles.hotelWrapper}>
                     <button className={styles.bookNowBtn}>Take it Now!</button>
@@ -58,9 +90,9 @@ const Hotel = () => {
                     {/* Hotel Feature Images */}
                     <div className={styles.images}>
                         {
-                            hotelImages.map((photo) => (
+                            hotelImages.map((photo, index) => (
                                 <div className={styles.imagesWrapper}>
-                                    <img src={photo.src} className={styles.hotelImge} alt="" />
+                                    <img src={photo.src} className={styles.hotelImge} onClick={() => handleSlide(index)} alt="" />
                                 </div>
                             ))
                         }
